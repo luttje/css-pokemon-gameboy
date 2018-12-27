@@ -1,9 +1,11 @@
+$pixel-scale: 2px;
+
 button{
     position: relative;
     font-family: $font-content;
     background: none;
     border: none;
-    padding: 0 0 0 2em;
+    padding: 0 0 0 1em;
     text-transform: uppercase;
     cursor: pointer;
     
@@ -11,30 +13,26 @@ button{
         content: "";
         position: absolute;
         top: 0;
-        left: 0;
-        width: 2px;
-        height: 2px;
-        font-size: 2px;
+        left: -2px;
+
+        width: $pixel-scale;
+        height: $pixel-scale;
+        font-size: $pixel-scale;
+
         color: $contrast;
-        box-shadow: 
-            1em 0em, 2em 0em,
-            1em 1em, 2em 1em, 3em 1em,
-            1em 2em, 2em 2em, 3em 2em, 4em 2em,
-            1em 3em, 2em 3em, 3em 3em, 4em 3em, 5em 3em,
-            1em 4em, 2em 4em, 3em 4em, 4em 4em,
-            1em 5em, 2em 5em, 3em 5em,
-            1em 6em, 2em 6em,;
+        @include arrow-right;
     }
 
     &.pokemon{
         text-indent: -1000em;
-        width: 40px;
-        background: url('./images/pkmn.png') 24px center no-repeat;
+        width: 100%;
+        background: url('./images/pkmn.png') 1em center no-repeat;
+        background-size: contain;
     }
 }
 
 ul.buttons{
-    display: flex;
+    display: inline-flex;
     padding: 0;
     list-style: none;
     flex-direction: column;
