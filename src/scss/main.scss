@@ -4,6 +4,7 @@
 @import 'resets.scss';
 @import 'frames.scss';
 @import 'input.scss';
+@import 'progress-bars.scss';
 
 body{
     font-family: $font-content;
@@ -30,4 +31,41 @@ h1, h2, h3, h4, h5, h6{
 .options{
     display: flex;
     justify-content: space-around;
+}
+
+.opponent{
+    text-align: center;
+    padding: 1em;
+
+    img{
+        width: 64px;
+    }
+}
+
+.message span{
+    font-weight: bolder;
+}
+
+/*
+    Styling, specifically for the demo
+*/
+.github{
+    position: fixed;
+    right:0;
+    top: 0;
+    width: 300px;
+    background: $neutral;
+    padding: 2em;
+    
+    animation-name: floater;
+    animation-duration: 6000ms;
+    transform-origin: 50% 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes floater {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(2px, 48px); }
+    100% { transform: translate(0, 0); }
 }
