@@ -38,6 +38,16 @@ h1, h2, h3, h4, h5, h6 {
   border-image: url("./images/frame.png") 7 round;
   border-width: 7px; }
 
+.framed.primary {
+  background: #48A058;
+  color: #F8F3F8;
+  text-shadow: -1px -1px 0 #181010, 1px -1px 0 #181010, -1px 1px 0 #181010, 1px 1px 0 #181010; }
+
+.framed.secondary {
+  background: #F0B088;
+  color: #F8F3F8;
+  text-shadow: -1px -1px 0 #181010, 1px -1px 0 #181010, -1px 1px 0 #181010, 1px 1px 0 #181010; }
+
 body {
   font-family: "Pokemon GB";
   font-smooth: never;

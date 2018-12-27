@@ -10,3 +10,15 @@
     border-image: url('./images/frame.png') 7 round;
     border-width: 7px;
 }
+
+.framed.primary{
+    background: $primary-accent;
+    color: $neutral;
+    @include text-outline;
+}
+
+.framed.secondary{
+    background: $secondary-accent;
+    color: $neutral;
+    @include text-outline;
+}
