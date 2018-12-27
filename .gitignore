@@ -1,3 +1,6 @@
+# Ignore builds
+dist/
+
 # Ignore VSCode user files
 .vscode
 
