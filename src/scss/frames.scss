@@ -1,0 +1,12 @@
+.framed{
+    border-image: url('./images/frame-hd.png') 42 round;
+    border-width: 21px;
+    border-style: solid;
+    padding: 1em;
+    margin: 1em 0 0 0;
+}
+
+.framed .no-hd{
+    border-image: url('./images/frame.png') 7 round;
+    border-width: 7px;
+}

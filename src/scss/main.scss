@@ -1,0 +1,26 @@
+@import '_variables.scss';
+@import 'fonts.scss';
+@import 'resets.scss';
+@import 'frames.scss';
+@import 'input.scss';
+
+body{
+    font-family: $font-content;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
+
+    background: $neutral;
+    color: $contrast;
+
+    font-size: 11px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}

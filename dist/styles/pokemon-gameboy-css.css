@@ -1,0 +1,57 @@
+/* Freeware Font Credits: https://www.fontspace.com/jackster-productions/pokemon-gb */
+@font-face {
+  font-family: "Pokemon GB";
+  src: url("fonts/Pokemon GB.woff") format("woff");
+  src: url("fonts/Pokemon GB.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("fonts/PressStart2P-Regular.woff") format("woff");
+  src: url("fonts/PressStart2P-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Pokemon Unown GB";
+  src: url("fonts/Pokemon Unown GB.woff") format("woff");
+  src: url("fonts/Pokemon Unown GB.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Pokemon GB Japan KT";
+  src: url("fonts/Pokemon GB Japan KT.woff") format("woff");
+  src: url("fonts/Pokemon GB Japan KT.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Pokemon GB Japan HR";
+  src: url("fonts/Pokemon GB Japan HR.woff") format("woff");
+  src: url("fonts/Pokemon GB Japan HR.ttf") format("truetype"); }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+.framed {
+  border-image: url("./images/frame-hd.png") 42 round;
+  border-width: 21px;
+  border-style: solid;
+  padding: 1em;
+  margin: 1em 0 0 0; }
+
+.framed .no-hd {
+  border-image: url("./images/frame.png") 7 round;
+  border-width: 7px; }
+
+body {
+  font-family: "Pokemon GB";
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  background: #F8F3F8;
+  color: #181010;
+  font-size: 11px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+.wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=pokemon-gameboy-css.css.map */
