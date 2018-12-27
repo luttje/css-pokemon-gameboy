@@ -31,6 +31,8 @@ To efficiently use this repository it is recommended you use [npm and grunt](htt
 
 3. Run `grunt watch` in the root directory to watch for changes in the `src` directory and automatically build new distributions.
 
+Use [this technique described by Coby Chapple](https://gist.github.com/cobyism/4730490) to quickly push an update to the github pages branch.
+
 
 ## Licenses
 
