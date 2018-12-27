@@ -2,7 +2,7 @@
 
 Inspired by: https://github.com/nostalgic-css/NES.css
 
-
+This is a joke CSS-framework and it is not intended for use in production. You can [see a demo here](https://timothywalter.github.io/pokemon-gameboy-css/).
 
 ## Usage
 
@@ -20,7 +20,6 @@ To efficiently use this repository it is recommended you use [npm and grunt](htt
 
 3. See the demo.html or .scss-files for all possible classes and effects.
 
-
 #### To compile it yourself
 
 1. Run `npm install`in the root directory (the directory where `package.json` is located)
@@ -32,7 +31,6 @@ To efficiently use this repository it is recommended you use [npm and grunt](htt
 3. Run `grunt watch` in the root directory to watch for changes in the `src` directory and automatically build new distributions.
 
 Use [this technique described by Coby Chapple](https://gist.github.com/cobyism/4730490) to quickly push an update to the github pages branch.
-
 
 ## Licenses
 
