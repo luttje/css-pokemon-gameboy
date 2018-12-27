@@ -1,6 +1,11 @@
 $pixel-scale: 2px;
 
-button{
+a.button, a.button:hover, a.button:active{
+    color: $contrast;
+    text-decoration: none;
+}
+
+button, .button{
     position: relative;
     font-family: $font-content;
     background: none;
@@ -15,11 +20,6 @@ button{
         top: 0;
         left: -2px;
 
-        width: $pixel-scale;
-        height: $pixel-scale;
-        font-size: $pixel-scale;
-
-        color: $contrast;
         @include arrow-right;
     }
 

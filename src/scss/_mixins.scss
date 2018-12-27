@@ -7,6 +7,11 @@
 }
 
 @mixin arrow-right{
+    width: $pixel-scale;
+    height: $pixel-scale;
+    font-size: $pixel-scale;
+
+    color: $contrast;
     box-shadow: 
             1em 0em 0 $contrast, 2em 0em 0 $contrast,
             1em 1em 0 $contrast, 2em 1em 0 $contrast, 3em 1em 0 $contrast,
