@@ -1,0 +1,110 @@
+/* Freeware Font Credits: https://www.fontspace.com/jackster-productions/pokemon-gb */
+@font-face {
+  font-family: "Pokemon GB";
+  src: url("fonts/Pokemon GB.woff") format("woff");
+  src: url("fonts/Pokemon GB.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("fonts/PressStart2P-Regular.woff") format("woff");
+  src: url("fonts/PressStart2P-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Pokemon Unown GB";
+  src: url("fonts/Pokemon Unown GB.woff") format("woff");
+  src: url("fonts/Pokemon Unown GB.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Pokemon GB Japan KT";
+  src: url("fonts/Pokemon GB Japan KT.woff") format("woff");
+  src: url("fonts/Pokemon GB Japan KT.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Pokemon GB Japan HR";
+  src: url("fonts/Pokemon GB Japan HR.woff") format("woff");
+  src: url("fonts/Pokemon GB Japan HR.ttf") format("truetype"); }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+.framed {
+  border-image: url("./images/frame-hd.png") 42 round;
+  border-width: 21px;
+  border-style: solid;
+  padding: 1em;
+  margin: 1em 0 0 0; }
+
+.framed .no-hd {
+  border-image: url("./images/frame.png") 7 round;
+  border-width: 7px; }
+
+.framed.primary {
+  background: #48A058;
+  color: #F8F3F8;
+  text-shadow: -1px -1px 0 #181010, 1px -1px 0 #181010, -1px 1px 0 #181010, 1px 1px 0 #181010; }
+
+.framed.secondary {
+  background: #F0B088;
+  color: #F8F3F8;
+  text-shadow: -1px -1px 0 #181010, 1px -1px 0 #181010, -1px 1px 0 #181010, 1px 1px 0 #181010; }
+
+button {
+  position: relative;
+  font-family: "Pokemon GB";
+  background: none;
+  border: none;
+  padding: 0 0 0 1em;
+  text-transform: uppercase;
+  cursor: pointer; }
+  button:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 2px;
+    height: 2px;
+    font-size: 2px;
+    color: #181010;
+    box-shadow: 1em 0em 0 #181010, 2em 0em 0 #181010, 1em 1em 0 #181010, 2em 1em 0 #181010, 3em 1em 0 #181010, 1em 2em 0 #181010, 2em 2em 0 #181010, 3em 2em 0 #181010, 4em 2em 0 #181010, 1em 3em 0 #181010, 2em 3em 0 #181010, 3em 3em 0 #181010, 4em 3em 0 #181010, 5em 3em 0 #181010, 1em 4em 0 #181010, 2em 4em 0 #181010, 3em 4em 0 #181010, 4em 4em 0 #181010, 1em 5em 0 #181010, 2em 5em 0 #181010, 3em 5em 0 #181010, 1em 6em 0 #181010, 2em 6em 0 #181010; }
+  button.pokemon {
+    text-indent: -1000em;
+    width: 100%;
+    background: url("./images/pkmn.png") 1em center no-repeat;
+    background-size: contain; }
+
+ul.buttons {
+  display: inline-flex;
+  padding: 0;
+  list-style: none;
+  flex-direction: column; }
+  ul.buttons li {
+    padding: 0;
+    margin: 0.5em; }
+  ul.buttons.compact {
+    flex-direction: row;
+    flex-wrap: wrap; }
+    ul.buttons.compact li {
+      flex-basis: 45%; }
+
+body {
+  font-family: "Pokemon GB";
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  background: #F8F3F8;
+  color: #181010;
+  font-size: 11px;
+  image-rendering: pixelated; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+.wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto; }
+
+.options {
+  display: flex;
+  justify-content: space-around; }
+
+/*# sourceMappingURL=pokemon-gameboy-css.css.map */
