@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon GameBoy CSS-Framework Demo</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Pokemon GameBoy CSS-Framework</h1>
+            <span>This is a demo of that framework.</span>
+        </header>
+        <main>
+            <section class="framed">
+                <h2>Frames</h2>
+                <p>Frames can be used to clearly indicate sections or menu's.</p>
+    
+                <div class="framed no-hd">
+                    <span>You can get the frame in it's original size by adding the no-hd class.</span>
+                </div>
+                
+                <div class="framed no-hd primary">
+                    <span>Frames can be styled with the primary...</span>
+                </div>
+                
+                <div class="framed no-hd secondary">
+                    <span>... secondary and danger accents.</span>
+                </div>
+                
+                <div class="framed no-hd danger">
+                    <span>Letters will be outlined when an accent is applied.</span>
+                </div>
+                
+                <div class="framed no-hd primary exclude-border">
+                    <span>Use the 'exclude-border' class to not draw the accent under the border.</span>
+                </div>
+            </section>
+            <section class="framed">
+                <h2>Buttons</h2>
+                <p>Buttons are recognizable by their text being uppercase. Hover over buttons to see a selection indicator</p>
+                
+                <button>This is an example button</button>
+
+                <p>You can organize buttons like you would see them in Pokémon, either in a list (start-menu) or in a group of 4.</p>
+
+                <div class="options">
+                    <div>
+                        <h3>Start menu style</h3>
+                        <ul class="framed no-hd buttons">
+                            <li><button>Pokédex</button></li>
+                            <li><button>Pokémon</button></li>
+                            <li><button>Item</button></li>
+                            <li><button>Player</button></li>
+                            <li><button>Save</button></li>
+                            <li><button>Option</button></li>
+                            <li><button>Exit</button></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Battle style</h3>
+                        <ul class="framed no-hd buttons compact">
+                            <li><button>Fight</button></li>
+                            <li><button class="pokemon">PKMN</button></li>
+                            <li><button>Item</button></li>
+                            <li><button>Run</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="framed github">
+                <div class="stats">
+                    <h2>Helix Fossil</h2>
+                    <div class="options">
+                        <label for="progressBar">HP:</label>
+                        <div class="progress-bar p45" id="progressBar"></div>
+                    </div>
+                </div>
+                <div class="opponent">
+                    <img src="./styles/images/helix-hd.png" alt="">
+                </div>
+                <div class="framed no-hd">
+                    <p class="message"><span>Helix Fossil:</span> Please come to GitHub and help me make this project better!</p>
+                    <a href="https://github.com/timothywalter/pokemon-gameboy-css/" target="_new" class="button">Go to GitHub Repo</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <link rel="stylesheet" href="./styles/pokemon-gameboy-css.css">
+    <script src="./scripts/pokemon-gameboy-css.js"></script>
+</body>
+</html>

@@ -60,7 +60,7 @@ module.exports = function(grunt) {
       },
       demo: {
         src: 'src/demo.html',
-        dest: 'dist/demo.html'
+        dest: 'dist/index.html'
       }
     },
     watch: {
