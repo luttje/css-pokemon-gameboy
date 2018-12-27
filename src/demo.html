@@ -71,7 +71,7 @@
             </section>
         </main>
         <footer>
-            <div class="framed github">
+            <div class="framed github" id="githubHint">
                 <div class="stats">
                     <h2>Helix Fossil</h2>
                     <div class="options">
@@ -84,7 +84,12 @@
                 </div>
                 <div class="framed no-hd">
                     <p class="message"><span>Helix Fossil:</span> Please come to GitHub and help me make this project better!</p>
-                    <a href="https://github.com/timothywalter/pokemon-gameboy-css/" target="_new" class="button">Go to GitHub Repo</a>
+                    <p>
+                        <a href="https://github.com/timothywalter/pokemon-gameboy-css/" target="_new" class="button">Go to GitHub Repo</a>
+                    </p>
+                    <p>
+                        <a href="javascript:var gh = document.getElementById('githubHint'); gh.parentElement.remove(gh);" class="button">Close this message</a>
+                    </p>
                 </div>
             </div>
         </footer>

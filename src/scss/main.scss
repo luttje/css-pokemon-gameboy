@@ -40,6 +40,12 @@ h1, h2, h3, h4, h5, h6{
     img{
         width: 64px;
     }
+    
+    animation-name: floater;
+    animation-duration: 6000ms;
+    transform-origin: 50% 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
 }
 
 .message span{
@@ -56,16 +62,10 @@ h1, h2, h3, h4, h5, h6{
     width: 300px;
     background: $neutral;
     padding: 2em;
-    
-    animation-name: floater;
-    animation-duration: 6000ms;
-    transform-origin: 50% 50%;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
 }
 
 @keyframes floater {
     0% { transform: translate(0, 0); }
-    50% { transform: translate(2px, 48px); }
+    50% { transform: translate(2px, 20px); }
     100% { transform: translate(0, 0); }
 }

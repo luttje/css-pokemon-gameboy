@@ -1154,7 +1154,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .opponent {
   text-align: center;
-  padding: 1em; }
+  padding: 1em;
+  animation-name: floater;
+  animation-duration: 6000ms;
+  transform-origin: 50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease; }
   .opponent img {
     width: 64px; }
 
@@ -1170,18 +1175,13 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   width: 300px;
   background: #F8F3F8;
-  padding: 2em;
-  animation-name: floater;
-  animation-duration: 6000ms;
-  transform-origin: 50% 50%;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease; }
+  padding: 2em; }
 
 @keyframes floater {
   0% {
     transform: translate(0, 0); }
   50% {
-    transform: translate(2px, 48px); }
+    transform: translate(2px, 20px); }
   100% {
     transform: translate(0, 0); } }
 
