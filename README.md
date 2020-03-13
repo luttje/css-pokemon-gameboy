@@ -2,7 +2,7 @@
 
 Inspired by: https://github.com/nostalgic-css/NES.css
 
-This is a joke CSS-framework and it is not intended for use in production. You can [see a demo here](https://timothywalter.github.io/pokemon-gameboy-css/).
+This is a joke CSS-framework and it is not intended for use in production. You can [see a demo here](https://timothywalter.github.io/css-pokemon-gameboy/). The demo performs poorly on mobile devices or small resolutions.
 
 ## Usage
 
