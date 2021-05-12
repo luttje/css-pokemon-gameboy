@@ -1,0 +1,81 @@
+.framed {
+    position: relative;
+    border-image: url('./images/frame-hd.png') 42 round;
+    border-width: 21px;
+    border-style: solid;
+    padding: 1em;
+    margin: 1em 0 0 0;
+
+    &.no-hd{
+        border-image: url('./images/frame.png') 7 round;
+        border-width: 7px;
+    }
+
+    &.primary{
+        background: $primary-accent;
+        color: $neutral;
+        @include text-outline;
+
+        &.exclude-border{
+            background-clip: padding-box;
+        }
+    }
+
+    &.secondary{
+        background: $secondary-accent;
+        color: $neutral;
+        @include text-outline;
+
+        &.exclude-border{
+            background-clip: padding-box;
+        }
+    }
+
+    &.danger{
+        background: $danger-accent;
+        color: $neutral;
+        @include text-outline;
+
+        &.exclude-border{
+            background-clip: padding-box;
+        }
+    }
+}
+
+.stats{
+    position: relative;
+    border: 4px solid $contrast;
+    border-top: none;
+    border-right: none;
+    padding: 2em;
+    margin-right: 64px;
+
+    &::after{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: inline-block;
+        content: '';
+        width: 2px;
+        height: 2px;
+        font-size: 2px;
+        color: $contrast;
+        box-shadow:
+        -4em -1em 0 $contrast, -5em -1em 0 $contrast,
+        -4em 0 0 $contrast, -5em 0 0 $contrast,
+        -3em 0 0 $contrast, -2em 0 0 $contrast,
+        1em 2em 0 $contrast, 1em 2em 0 $contrast,
+        2em 2em 0 $contrast, 2em 2em 0 $contrast,;
+    }
+
+    h2{
+        background-color: $neutral;
+        margin-left: -2em;
+        margin-top: -2em;
+        padding: 1em 1em 1em 0;
+    }
+
+    label{
+
+    }
+}
