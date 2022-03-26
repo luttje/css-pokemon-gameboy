@@ -14,6 +14,15 @@
         border-width: 7px;
     }
 
+    &.neutral{
+        background: $neutral;
+        color: $contrast;
+
+        &.exclude-border{
+            background-clip: padding-box;
+        }
+    }
+
     &.primary{
         background: $primary-accent;
         color: $neutral;
@@ -72,9 +81,9 @@
 
     h2{
         background-color: $neutral;
-        margin-left: -2em;
-        margin-top: -2em;
-        padding: 1em 1em 1em 0;
+        margin-left: -$medium-padding;
+        margin-top: -$medium-padding;
+        padding: $padding $padding $padding 0;
     }
 
     label{

@@ -24,26 +24,27 @@
                 <h2>Frames</h2>
                 <p>Frames can be used to clearly indicate sections or menu's.</p>
     
-                <div class="framed primary">
-                    <span>Frames can be styled with the primary...</span>
+                <div class="viewable-code">
+<div class="framed primary">
+    <span>Frames can be styled with the primary...</span>
+</div>
+
+<div class="framed secondary">
+    <span>... secondary and danger accents.</span>
+</div>
+
+<div class="framed danger">
+    <span>Letters will be outlined when an accent is applied.</span>
+</div>
+
+<div class="framed primary exclude-border">
+    <span>Use the 'exclude-border' class to not draw the accent under the border.</span>
+</div>
+
+<div class="framed no-hd">
+    <span>You can get the frame in it's original (unscaled) size by adding the no-hd class.</span>
+</div>
                 </div>
-                
-                <div class="framed secondary">
-                    <span>... secondary and danger accents.</span>
-                </div>
-                
-                <div class="framed danger">
-                    <span>Letters will be outlined when an accent is applied.</span>
-                </div>
-                
-                <div class="framed primary exclude-border">
-                    <span>Use the 'exclude-border' class to not draw the accent under the border.</span>
-                </div>
-                
-                <div class="framed no-hd">
-                    <span>You can get the frame in it's original (unscaled) size by adding the no-hd class.</span>
-                </div>
-                
             </section>
             <section class="framed">
                 <h2>Buttons</h2>
@@ -53,33 +54,63 @@
 
                 <p>You can organize buttons like you would see them in Pokémon, either in a list (start-menu) or in a group of 4.</p>
 
-                <div class="options">
-                    <div>
-                        <h3>Start menu style</h3>
-                        <ul class="framed no-hd buttons">
-                            <li><button>Pokédex</button></li>
-                            <li><button>Pokémon</button></li>
-                            <li><button>Item</button></li>
-                            <li><button>Player</button></li>
-                            <li><button>Save</button></li>
-                            <li><button>Option</button></li>
-                            <li><button>Exit</button></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Battle style</h3>
-                        <ul class="framed no-hd buttons compact">
-                            <li><button>Fight</button></li>
-                            <li><button class="pokemon">PKMN</button></li>
-                            <li><button>Item</button></li>
-                            <li><button>Run</button></li>
-                        </ul>
-                    </div>
+                <div class="options viewable-code">
+<div>
+    <h3>Start menu style</h3>
+    <ul class="framed buttons">
+        <li><button>Pokédex</button></li>
+        <li><button>Pokémon</button></li>
+        <li><button>Item</button></li>
+        <li><button>Player</button></li>
+        <li><button>Save</button></li>
+        <li><button>Option</button></li>
+        <li><button>Exit</button></li>
+    </ul>
+</div>
+<div>
+    <h3>Battle style</h3>
+    <ul class="framed buttons compact">
+        <li><button>Fight</button></li>
+        <li><button class="pokemon">PKMN</button></li>
+        <li><button>Item</button></li>
+        <li><button>Run</button></li>
+    </ul>
+</div>
+                </div>
+            </section>
+            <section class="framed">
+                <h2>Progress / Health Bar</h2>
+                <p>Like in the game, this progress/health bar changes colour when it's low (by default).</p>
+                
+                <div class="viewable-code">
+<div class="progress-bar-container">
+    <label for="progressBarG">Good health:</label>
+    <div class="progress-bar p100" id="progressBarG"></div>
+</div>
+<div class="progress-bar-container">
+    <label for="progressBarP">Poor health:</label>
+    <div class="progress-bar p50" id="progressBarP"></div>
+</div>
+<div class="progress-bar-container">
+    <label for="progressBarL">Low health:</label>
+    <div class="progress-bar p20" id="progressBarL"></div>
+</div>
+<div class="progress-bar-container">
+    <label for="progressBarF">Forced color:</label>
+    <div class="progress-bar p20 primary" id="progressBarF"></div>
+</div>
+<div class="progress-bar-container">
+    <label for="progressBarR">Using &lt;Progress&gt;*:</label>
+    <progress id="progressBarR" class="p20" value="20" max="100">20%</progress>
+</div>
+<p>
+    <em>* On Google Chrome the &lt;Progress&gt; element does not support changing color based on [value] attribute. Apply a .p1 - .p100 class to the progressbar for maximum compatibility.</em>
+</p>
                 </div>
             </section>
         </main>
         <div id="githubHint">
-            <div class="framed github">
+            <div class="framed neutral github">
                 <div class="stats">
                     <h2>Helix Fossil</h2>
                     <div class="progress-bar-container">
@@ -90,7 +121,7 @@
                 <div class="opponent">
                     <img src="./styles/images/helix-hd.png" alt="">
                 </div>
-                <div class="framed no-hd">
+                <div class="framed">
                     <p class="message"><span>Helix Fossil:</span> Please come to GitHub and help me make this project better!</p>
                     <p>
                         <a href="https://github.com/luttje/css-pokemon-gameboy/" target="_new" class="button">Go to GitHub Repo</a>
@@ -104,5 +135,33 @@
     </div>
 
     <link rel="stylesheet" href="./styles/pokemon-gameboy-css.css">
+    <script>
+        function toggleCode(showButton){
+            showButton.parentElement.classList.toggle('show');
+        }
+
+        let codeElements = document.querySelectorAll('.viewable-code');
+        codeElements.forEach(codeElement => {
+            let codeViewParent = document.createElement('div');
+            codeViewParent.classList.add('code');
+            codeElement.parentElement.appendChild(codeViewParent);
+
+            let pre = document.createElement('pre');
+            codeViewParent.appendChild(pre);
+
+            let code = document.createElement('code');
+            code.classList.add('language-html');
+            code.textContent = codeElement.innerHTML;
+            pre.appendChild(code);
+
+            let button = document.createElement('button');
+            button.classList.add('toggle');
+            button.addEventListener('click', ev => {
+                toggleCode(ev.target)
+            });
+            codeViewParent.appendChild(button);
+        });
+    </script>
+    <script src="scripts/third-party/prism.js"></script>
 </body>
 </html>

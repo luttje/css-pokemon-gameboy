@@ -8,8 +8,15 @@ $contrast: #181010;
 $primary-accent: #48A058;
 $secondary-accent: #F0B088;
 $danger-accent: #B3181C;
+$dimmed: change-color($contrast, $alpha: 0.6);
+$dimmed-light: change-color($neutral, $alpha: 0.6);
 
 $min-width: 320px;
+$size: 2em;
+
 $padding: 1em;
+$medium-padding: 2em;
 $big-padding: 4em;
 $huge-padding: 8em;
+
+$small-modifier: 0.5;

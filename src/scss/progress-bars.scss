@@ -1,37 +1,85 @@
 .progress-bar-container{
     display: flex;
     align-items: center;
-}
 
-.progress-bar{
-    position: relative;
-    width: 100%;
-    height: 4px;
-    
-    border-image-slice: 1;
-    border-image-width: 2px;
-    border-image-outset: 2px;
-    border-image-repeat: stretch stretch;
-    border-image-source: url('./images/progress-frame.png');
-    background-clip: padding-box;
-}
+    label{
+        margin-right: $padding;
+    }
 
-@for $i from 1 through 100 {
-    .progress-bar.p#{$i}::after { 
-        content: '';
-        display: inline-block;
-
-        @if $i < 21 {
-            background: $danger-accent;
-        } @else if $i < 51 {
-            background: $secondary-accent;
-        } @else{
-            background: $primary-accent;
-        }
-        width: #{$i + '%'};
+    .progress-bar, progress{
+        position: relative;
+        flex-grow: 1;
         height: 4px;
-        position: absolute;
-        top: 0;
-        left: 0;
+
+        border: 2px solid transparent;
+        border-image-slice: 1;
+        border-image-width: 2px;
+        border-block: 0;
+        border-image-outset: 2px 0 2px 0;
+        border-image-repeat: stretch stretch;
+        border-image-source: url('./images/progress-frame.png');
+        background: none;
+        background-clip: padding-box;
+    }
+
+    progress::-webkit-progress-bar {
+        background: none;
+    }
+
+    progress::-webkit-progress-value, progress.primary::-webkit-progress-value{
+        background: $primary-accent;
+    }
+            
+    @for $i from 1 through 100 {
+        .progress-bar.p#{$i}{
+            &::after { 
+                content: '';
+                display: inline-block;
+                position: absolute;
+
+                @if $i < 21 {
+                    background: $danger-accent;
+                } @else if $i < 51 {
+                    background: $secondary-accent;
+                } @else{
+                    background: $primary-accent;
+                }
+                width: #{$i + '%'};
+                height: 4px;
+                top: 0;
+                left: 0;
+            }
+
+            &.primary::after {
+                background: $primary-accent;
+            }
+        }
+    
+        progress[value="#{$i}"]::-moz-progress-bar{
+            height: 4px;
+
+            @if $i < 21 {
+                background: $danger-accent;
+            } @else if $i < 51 {
+                background: $secondary-accent;
+            } @else{
+                background: $primary-accent;
+            }
+
+            &.primary {
+                background: $primary-accent;
+            }
+        }
+
+        // TODO: Find way to dynamically change color based on value. On Chrome progress[value="#{$i}"]::-webkit-progress-value does not get applied.
+        progress.p#{$i}::-webkit-progress-value{
+            @if $i < 21 {
+                background: $danger-accent;
+            } @else if $i < 51 {
+                background: $secondary-accent;
+            } @else{
+                background: $primary-accent;
+            }
+        }
     }
 }

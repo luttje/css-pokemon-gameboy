@@ -56,8 +56,10 @@ h1, h2, h3, h4, h5, h6{
 /*
     Styling, specifically for the demo
 */
+@import './third-party/prism.scss';
+
 #githubHint{
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: $dimmed;
     position: fixed;
     top: 0;
     right: 0;
@@ -70,11 +72,41 @@ h1, h2, h3, h4, h5, h6{
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 512px;
-    background: $neutral;
     padding: 2em;
 
     .stats{
         margin-right: $big-padding;
+    }
+}
+
+.code{
+    .toggle{
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &::after{
+            content: 'Toggle code';
+        }
+    }
+
+    &.show pre{
+        display: block;
+    }
+
+    pre{
+        display: none;
+        position: absolute;
+        overflow: auto;
+        top: $medium-padding;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $neutral;
+    }
+
+    pre, code{
+        white-space: pre-wrap;
     }
 }
 
@@ -95,8 +127,30 @@ h1, h2, h3, h4, h5, h6{
 
     .github{
         max-width: 100%;
+        top: initial;
+        right: 0;
         bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
+        left: 0;
+        transform: translate(0, 0);
+    }
+
+
+    .framed {
+        padding: $padding * $small-modifier;
+        margin: $padding * $small-modifier 0 0 0;
+    }
+    
+    .stats{
+        padding: $padding * $small-modifier;
+
+        h2{
+            margin-left: -$padding * $small-modifier;
+            margin-top: -$padding * $small-modifier;
+            padding: $padding * $small-modifier $padding * $small-modifier $padding * $small-modifier 0;
+        }
+    }
+    
+    .opponent{
+        padding: $padding * $small-modifier;
     }
 }
