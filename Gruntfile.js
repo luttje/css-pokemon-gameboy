@@ -16,7 +16,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/styles/<%= pkg.name %>.css': 'src/scss/main.scss'
+          'dist/styles/css-pokemon-gameboy.css': 'src/scss/main.scss',
+          'dist/styles/github.css': 'src/scss/github.scss',
         }
       }
     },
@@ -49,7 +50,11 @@ module.exports = function(grunt) {
       demo: {
         src: 'src/demo.html',
         dest: 'dist/index.html'
-      }
+      },
+      template: {
+        src: 'src/template.html',
+        dest: 'dist/template.html'
+      },
     },
     watch: {
       scripts: {

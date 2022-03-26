@@ -1,0 +1,82 @@
+/*
+    Styling, specifically for the demo on GitHub
+*/
+@import '_variables.scss';
+@import './third-party/prism.scss';
+
+#githubHint{
+    background-color: $dimmed;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.github{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 512px;
+    padding: 2em;
+
+    .stats{
+        margin-right: $big-padding;
+    }
+}
+
+.code{
+    .toggle{
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &::after{
+            content: 'Toggle code';
+        }
+    }
+
+    &.show pre{
+        display: block;
+    }
+
+    pre{
+        display: none;
+        position: absolute;
+        overflow: auto;
+        top: $medium-padding;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $neutral;
+    }
+
+    pre, code{
+        white-space: pre-wrap;
+    }
+}
+
+@keyframes floater {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(2px, 20px); }
+    100% { transform: translate(0, 0); }
+}
+
+@media only screen and (max-width: 760px) {
+    .options{
+        flex-direction: column;
+
+        & > div{
+            margin: $padding;
+        }
+    }
+
+    .github{
+        max-width: 100%;
+        top: initial;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+}

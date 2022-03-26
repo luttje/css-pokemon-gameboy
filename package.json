@@ -1,10 +1,10 @@
 {
-  "name": "pokemon-gameboy-css",
+  "name": "css-pokemon-gameboy",
   "description": "A small CSS-framework based on the original Pokémon games for the Game Boy.",
   "author": {
     "name": "Lutt.online"
   },
-  "version": "0.4.4",
+  "version": "0.4.6",
   "license": "Unlicense",
   "repository": "https://github.com/luttje/css-pokemon-gameboy",
   "engines": {

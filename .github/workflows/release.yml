@@ -18,12 +18,13 @@ jobs:
         with:
           type: 'zip'
           filename: 'release.zip'
-          path: 'dist/styles/'
+          exclusions: 'android-chrome-*.png apple-touch-icon.png favicon* index.html site.webmanifest'
+          directory: 'dist'
 
       - name: Create Release on GitHub
         uses: ncipollo/release-action@v1
         with:
-          artifacts: 'release.zip'
+          artifacts: 'dist/release.zip'
           removeArtifacts: true
           body: 'Automatic release created by GitHub Action.'
           prerelease: true

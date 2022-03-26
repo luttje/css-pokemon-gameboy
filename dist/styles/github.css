@@ -1,0 +1,150 @@
+/*
+    Styling, specifically for the demo on GitHub
+*/
+/* PrismJS 1.27.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css */
+code[class*=language-], pre[class*=language-] {
+  color: #000;
+  background: 0 0;
+  text-shadow: 0 1px #fff;
+  font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+code[class*=language-] ::-moz-selection, code[class*=language-]::-moz-selection, pre[class*=language-] ::-moz-selection, pre[class*=language-]::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+code[class*=language-] ::selection, code[class*=language-]::selection, pre[class*=language-] ::selection, pre[class*=language-]::selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+@media print {
+  code[class*=language-], pre[class*=language-] {
+    text-shadow: none; } }
+
+pre[class*=language-] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto; }
+
+:not(pre) > code[class*=language-], pre[class*=language-] {
+  background: #f5f2f0; }
+
+:not(pre) > code[class*=language-] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal; }
+
+.token.cdata, .token.comment, .token.doctype, .token.prolog {
+  color: #708090; }
+
+.token.punctuation {
+  color: #999; }
+
+.token.namespace {
+  opacity: .7; }
+
+.token.boolean, .token.constant, .token.deleted, .token.number, .token.property, .token.symbol, .token.tag {
+  color: #905; }
+
+.token.attr-name, .token.builtin, .token.char, .token.inserted, .token.selector, .token.string {
+  color: #690; }
+
+.language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
+  color: #9a6e3a;
+  background: rgba(255, 255, 255, 0.5); }
+
+.token.atrule, .token.attr-value, .token.keyword {
+  color: #07a; }
+
+.token.class-name, .token.function {
+  color: #dd4a68; }
+
+.token.important, .token.regex, .token.variable {
+  color: #e90; }
+
+.token.bold, .token.important {
+  font-weight: 700; }
+
+.token.italic {
+  font-style: italic; }
+
+.token.entity {
+  cursor: help; }
+
+#githubHint {
+  background-color: rgba(24, 16, 16, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.github {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 512px;
+  padding: 2em; }
+  .github .stats {
+    margin-right: 4em; }
+
+.code .toggle {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .code .toggle::after {
+    content: 'Toggle code'; }
+
+.code.show pre {
+  display: block; }
+
+.code pre {
+  display: none;
+  position: absolute;
+  overflow: auto;
+  top: 2em;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #F8F3F8; }
+
+.code pre, .code code {
+  white-space: pre-wrap; }
+
+@keyframes floater {
+  0% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(2px, 20px); }
+  100% {
+    transform: translate(0, 0); } }
+
+@media only screen and (max-width: 760px) {
+  .options {
+    flex-direction: column; }
+    .options > div {
+      margin: 1em; }
+  .github {
+    max-width: 100%;
+    top: initial;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate(0, 0); } }
+
+/*# sourceMappingURL=github.css.map */

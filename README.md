@@ -12,7 +12,7 @@ This is a joke CSS-framework and it is not intended for use in production. You c
 2. Append the following include on the page where you want this style:
 
 ```html
-<link rel="stylesheet" href="./styles/pokemon-gameboy-css.css">
+<link rel="stylesheet" href="./styles/css-pokemon-gameboy.css">
 ```
 
 3. See the [demo](https://luttje.github.io/css-pokemon-gameboy/), index.html or .scss-files for all possible classes and effects.
