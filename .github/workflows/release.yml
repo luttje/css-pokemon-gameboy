@@ -1,0 +1,19 @@
+name: Publish release on tag push
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: softprops/action-gh-release@v0.1.14
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          prerelease: true
+          body: Automatic release created by GitHub Action.
+          files: dist/styles/**
