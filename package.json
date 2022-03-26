@@ -1,23 +1,20 @@
 {
   "name": "pokemon-gameboy-css",
-  "description": "A small CSS-framework based on the original Pokémon games for GameBoy.",
+  "description": "A small CSS-framework based on the original Pokémon games for the Game Boy.",
   "author": {
     "name": "Lutt.online"
   },
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "Unlicense",
-  "repository": "https://github.com/luttje/pokemon-gameboy-css",
+  "repository": "https://github.com/luttje/css-pokemon-gameboy",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 8"
   },
   "devDependencies": {
-    "grunt": "^1.0.3",
-    "grunt-contrib-concat": "~1.0.1",
+    "grunt": "^1.4.1",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-uglify": "~4.0.0",
-    "grunt-contrib-watch": "~1.1.0",
-    "grunt-sass": "^3.0.2",
-    "node-sass": "^4.11.0"
-  },
-  "dependencies": {}
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "node-sass": "^7.0.1"
+  }
 }

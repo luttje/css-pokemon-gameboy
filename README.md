@@ -20,6 +20,13 @@ This is a joke CSS-framework and it is not intended for use in production. You c
 
 ## Compile it yourself
 
+### Requirments
+
+Ensure you have the [Grunt CLI](https://gruntjs.com/getting-started) installed:
+`npm install -g grunt-cli`
+
+### Compiling
+
 1. Run `npm install`in the root directory (the directory where `package.json` is located)
 
 2. Run `grunt` in the root directory to build a distribution

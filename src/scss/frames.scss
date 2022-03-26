@@ -3,8 +3,11 @@
     border-image: url('./images/frame-hd.png') 42 round;
     border-width: 21px;
     border-style: solid;
-    padding: 1em;
-    margin: 1em 0 0 0;
+    padding: $padding;
+    margin: $padding 0 0 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: $min-width;
 
     &.no-hd{
         border-image: url('./images/frame.png') 7 round;
@@ -47,8 +50,7 @@
     border: 4px solid $contrast;
     border-top: none;
     border-right: none;
-    padding: 2em;
-    margin-right: 64px;
+    padding: $padding;
 
     &::after{
         position: absolute;

@@ -1,11 +1,18 @@
+.progress-bar-container{
+    display: flex;
+    align-items: center;
+}
+
 .progress-bar{
     position: relative;
     width: 100%;
-    height: 5px;
+    height: 4px;
     
-    border-image: url('./images/progress-frame.png') 1 round;
-    border-width: 4px;
-    border-style: solid;
+    border-image-slice: 1;
+    border-image-width: 2px;
+    border-image-outset: 2px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url('./images/progress-frame.png');
     background-clip: padding-box;
 }
 
@@ -22,7 +29,7 @@
             background: $primary-accent;
         }
         width: #{$i + '%'};
-        height: 5px;
+        height: 4px;
         position: absolute;
         top: 0;
         left: 0;
