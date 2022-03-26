@@ -2,7 +2,6 @@ name: Publish release on tag push
 
 on:
   push:
-    branches: [ main ]
     tags:
       - "v*.*.*"
 
@@ -18,7 +17,7 @@ jobs:
         with:
           type: 'zip'
           filename: 'release.zip'
-          exclusions: 'scripts/third-party/prism.js android-chrome-*.png apple-touch-icon.png favicon* index.html site.webmanifest'
+          exclusions: 'scripts/* android-chrome-*.png apple-touch-icon.png favicon* index.html site.webmanifest'
           directory: 'dist'
 
       - name: Create Release on GitHub
