@@ -40,4 +40,5 @@ Ensure you have the [Grunt CLI](https://gruntjs.com/getting-started) installed:
 
 **The images in this repository are the property of Nintendo. The style is also property of Nintendo.**
 
-The code in this repository is Unlicensed, with the exception of used third-party libraries like Grunt, Node and npm. You can view the licenses related to third-parties in the root of the source-code or on their respective websites.
+The code in this repository is Unlicensed, with the exception of used third-party libraries like
+PrismJs, Grunt, Node and npm. You can view the licenses related to third-parties in [LICENSE-3RD-PARTY.txt](LICENSE-3RD-PARTY.txt) or on their respective websites.
