@@ -13,8 +13,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: softprops/action-gh-release@v0.1.14
+      - name: Zip Release
+        uses: TheDoctor0/zip-release@0.6.1
+        with:
+          type: 'zip'
+          filename: 'release.zip'
+          directory: 'dist/styles/'
+
+      - name: Create Release on GitHub
+        uses: softprops/action-gh-release@v0.1.14
         with:
           prerelease: true
           body: Automatic release created by GitHub Action.
-          files: dist/styles/**
+          files: 'release.zip'
