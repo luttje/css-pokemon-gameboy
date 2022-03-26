@@ -7,6 +7,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
+    clean: ['dist/**'],
     sass: {
       options: {
         implementation: sass,
@@ -62,11 +63,12 @@ module.exports = function(grunt) {
   });
 
   // These plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-sass');
 
   // Default task.
-  grunt.registerTask('default', ['copy', 'sass']);
+  grunt.registerTask('default', ['clean', 'copy', 'sass']);
 
 };

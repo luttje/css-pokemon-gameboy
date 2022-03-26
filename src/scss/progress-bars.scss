@@ -26,7 +26,9 @@
         background: none;
     }
 
-    progress::-webkit-progress-value, progress.primary::-webkit-progress-value{
+    progress::-webkit-progress-value, 
+    progress.primary::-webkit-progress-value,
+    progress.primary::-moz-progress-bar{
         background: $primary-accent;
     }
             
@@ -63,10 +65,6 @@
             } @else if $i < 51 {
                 background: $secondary-accent;
             } @else{
-                background: $primary-accent;
-            }
-
-            &.primary {
                 background: $primary-accent;
             }
         }

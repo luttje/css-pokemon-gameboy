@@ -1,4 +1,3 @@
-/* Freeware Font Credits: https://www.fontspace.com/jackster-productions/pokemon-gb */
 @font-face {
   font-family: "Pokemon GB";
   src: url("fonts/Pokemon GB.woff") format("woff");
@@ -8,21 +7,6 @@
   font-family: "Press Start 2P";
   src: url("fonts/PressStart2P-Regular.woff") format("woff");
   src: url("fonts/PressStart2P-Regular.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Pokemon Unown GB";
-  src: url("fonts/Pokemon Unown GB.woff") format("woff");
-  src: url("fonts/Pokemon Unown GB.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Pokemon GB Japan KT";
-  src: url("fonts/Pokemon GB Japan KT.woff") format("woff");
-  src: url("fonts/Pokemon GB Japan KT.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Pokemon GB Japan HR";
-  src: url("fonts/Pokemon GB Japan HR.woff") format("woff");
-  src: url("fonts/Pokemon GB Japan HR.ttf") format("truetype"); }
 
 * {
   box-sizing: border-box; }
@@ -152,7 +136,9 @@ ul.buttons {
     background-clip: padding-box; }
   .progress-bar-container progress::-webkit-progress-bar {
     background: none; }
-  .progress-bar-container progress::-webkit-progress-value, .progress-bar-container progress.primary::-webkit-progress-value {
+  .progress-bar-container progress::-webkit-progress-value,
+  .progress-bar-container progress.primary::-webkit-progress-value,
+  .progress-bar-container progress.primary::-moz-progress-bar {
     background: #48A058; }
   .progress-bar-container .progress-bar.p1::after {
     content: '';
@@ -168,8 +154,6 @@ ul.buttons {
   .progress-bar-container progress[value="1"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="1"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p1::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p2::after {
@@ -186,8 +170,6 @@ ul.buttons {
   .progress-bar-container progress[value="2"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="2"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p2::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p3::after {
@@ -204,8 +186,6 @@ ul.buttons {
   .progress-bar-container progress[value="3"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="3"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p3::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p4::after {
@@ -222,8 +202,6 @@ ul.buttons {
   .progress-bar-container progress[value="4"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="4"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p4::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p5::after {
@@ -240,8 +218,6 @@ ul.buttons {
   .progress-bar-container progress[value="5"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="5"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p5::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p6::after {
@@ -258,8 +234,6 @@ ul.buttons {
   .progress-bar-container progress[value="6"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="6"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p6::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p7::after {
@@ -276,8 +250,6 @@ ul.buttons {
   .progress-bar-container progress[value="7"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="7"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p7::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p8::after {
@@ -294,8 +266,6 @@ ul.buttons {
   .progress-bar-container progress[value="8"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="8"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p8::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p9::after {
@@ -312,8 +282,6 @@ ul.buttons {
   .progress-bar-container progress[value="9"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="9"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p9::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p10::after {
@@ -330,8 +298,6 @@ ul.buttons {
   .progress-bar-container progress[value="10"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="10"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p10::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p11::after {
@@ -348,8 +314,6 @@ ul.buttons {
   .progress-bar-container progress[value="11"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="11"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p11::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p12::after {
@@ -366,8 +330,6 @@ ul.buttons {
   .progress-bar-container progress[value="12"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="12"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p12::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p13::after {
@@ -384,8 +346,6 @@ ul.buttons {
   .progress-bar-container progress[value="13"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="13"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p13::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p14::after {
@@ -402,8 +362,6 @@ ul.buttons {
   .progress-bar-container progress[value="14"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="14"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p14::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p15::after {
@@ -420,8 +378,6 @@ ul.buttons {
   .progress-bar-container progress[value="15"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="15"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p15::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p16::after {
@@ -438,8 +394,6 @@ ul.buttons {
   .progress-bar-container progress[value="16"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="16"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p16::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p17::after {
@@ -456,8 +410,6 @@ ul.buttons {
   .progress-bar-container progress[value="17"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="17"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p17::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p18::after {
@@ -474,8 +426,6 @@ ul.buttons {
   .progress-bar-container progress[value="18"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="18"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p18::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p19::after {
@@ -492,8 +442,6 @@ ul.buttons {
   .progress-bar-container progress[value="19"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="19"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p19::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p20::after {
@@ -510,8 +458,6 @@ ul.buttons {
   .progress-bar-container progress[value="20"]::-moz-progress-bar {
     height: 4px;
     background: #B3181C; }
-    .progress-bar-container progress[value="20"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p20::-webkit-progress-value {
     background: #B3181C; }
   .progress-bar-container .progress-bar.p21::after {
@@ -528,8 +474,6 @@ ul.buttons {
   .progress-bar-container progress[value="21"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="21"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p21::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p22::after {
@@ -546,8 +490,6 @@ ul.buttons {
   .progress-bar-container progress[value="22"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="22"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p22::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p23::after {
@@ -564,8 +506,6 @@ ul.buttons {
   .progress-bar-container progress[value="23"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="23"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p23::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p24::after {
@@ -582,8 +522,6 @@ ul.buttons {
   .progress-bar-container progress[value="24"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="24"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p24::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p25::after {
@@ -600,8 +538,6 @@ ul.buttons {
   .progress-bar-container progress[value="25"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="25"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p25::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p26::after {
@@ -618,8 +554,6 @@ ul.buttons {
   .progress-bar-container progress[value="26"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="26"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p26::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p27::after {
@@ -636,8 +570,6 @@ ul.buttons {
   .progress-bar-container progress[value="27"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="27"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p27::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p28::after {
@@ -654,8 +586,6 @@ ul.buttons {
   .progress-bar-container progress[value="28"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="28"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p28::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p29::after {
@@ -672,8 +602,6 @@ ul.buttons {
   .progress-bar-container progress[value="29"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="29"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p29::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p30::after {
@@ -690,8 +618,6 @@ ul.buttons {
   .progress-bar-container progress[value="30"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="30"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p30::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p31::after {
@@ -708,8 +634,6 @@ ul.buttons {
   .progress-bar-container progress[value="31"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="31"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p31::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p32::after {
@@ -726,8 +650,6 @@ ul.buttons {
   .progress-bar-container progress[value="32"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="32"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p32::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p33::after {
@@ -744,8 +666,6 @@ ul.buttons {
   .progress-bar-container progress[value="33"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="33"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p33::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p34::after {
@@ -762,8 +682,6 @@ ul.buttons {
   .progress-bar-container progress[value="34"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="34"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p34::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p35::after {
@@ -780,8 +698,6 @@ ul.buttons {
   .progress-bar-container progress[value="35"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="35"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p35::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p36::after {
@@ -798,8 +714,6 @@ ul.buttons {
   .progress-bar-container progress[value="36"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="36"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p36::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p37::after {
@@ -816,8 +730,6 @@ ul.buttons {
   .progress-bar-container progress[value="37"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="37"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p37::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p38::after {
@@ -834,8 +746,6 @@ ul.buttons {
   .progress-bar-container progress[value="38"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="38"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p38::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p39::after {
@@ -852,8 +762,6 @@ ul.buttons {
   .progress-bar-container progress[value="39"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="39"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p39::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p40::after {
@@ -870,8 +778,6 @@ ul.buttons {
   .progress-bar-container progress[value="40"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="40"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p40::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p41::after {
@@ -888,8 +794,6 @@ ul.buttons {
   .progress-bar-container progress[value="41"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="41"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p41::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p42::after {
@@ -906,8 +810,6 @@ ul.buttons {
   .progress-bar-container progress[value="42"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="42"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p42::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p43::after {
@@ -924,8 +826,6 @@ ul.buttons {
   .progress-bar-container progress[value="43"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="43"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p43::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p44::after {
@@ -942,8 +842,6 @@ ul.buttons {
   .progress-bar-container progress[value="44"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="44"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p44::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p45::after {
@@ -960,8 +858,6 @@ ul.buttons {
   .progress-bar-container progress[value="45"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="45"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p45::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p46::after {
@@ -978,8 +874,6 @@ ul.buttons {
   .progress-bar-container progress[value="46"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="46"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p46::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p47::after {
@@ -996,8 +890,6 @@ ul.buttons {
   .progress-bar-container progress[value="47"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="47"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p47::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p48::after {
@@ -1014,8 +906,6 @@ ul.buttons {
   .progress-bar-container progress[value="48"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="48"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p48::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p49::after {
@@ -1032,8 +922,6 @@ ul.buttons {
   .progress-bar-container progress[value="49"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="49"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p49::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p50::after {
@@ -1050,8 +938,6 @@ ul.buttons {
   .progress-bar-container progress[value="50"]::-moz-progress-bar {
     height: 4px;
     background: #F0B088; }
-    .progress-bar-container progress[value="50"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p50::-webkit-progress-value {
     background: #F0B088; }
   .progress-bar-container .progress-bar.p51::after {
@@ -1068,8 +954,6 @@ ul.buttons {
   .progress-bar-container progress[value="51"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="51"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p51::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p52::after {
@@ -1086,8 +970,6 @@ ul.buttons {
   .progress-bar-container progress[value="52"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="52"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p52::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p53::after {
@@ -1104,8 +986,6 @@ ul.buttons {
   .progress-bar-container progress[value="53"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="53"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p53::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p54::after {
@@ -1122,8 +1002,6 @@ ul.buttons {
   .progress-bar-container progress[value="54"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="54"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p54::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p55::after {
@@ -1140,8 +1018,6 @@ ul.buttons {
   .progress-bar-container progress[value="55"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="55"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p55::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p56::after {
@@ -1158,8 +1034,6 @@ ul.buttons {
   .progress-bar-container progress[value="56"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="56"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p56::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p57::after {
@@ -1176,8 +1050,6 @@ ul.buttons {
   .progress-bar-container progress[value="57"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="57"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p57::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p58::after {
@@ -1194,8 +1066,6 @@ ul.buttons {
   .progress-bar-container progress[value="58"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="58"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p58::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p59::after {
@@ -1212,8 +1082,6 @@ ul.buttons {
   .progress-bar-container progress[value="59"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="59"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p59::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p60::after {
@@ -1230,8 +1098,6 @@ ul.buttons {
   .progress-bar-container progress[value="60"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="60"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p60::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p61::after {
@@ -1248,8 +1114,6 @@ ul.buttons {
   .progress-bar-container progress[value="61"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="61"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p61::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p62::after {
@@ -1266,8 +1130,6 @@ ul.buttons {
   .progress-bar-container progress[value="62"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="62"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p62::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p63::after {
@@ -1284,8 +1146,6 @@ ul.buttons {
   .progress-bar-container progress[value="63"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="63"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p63::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p64::after {
@@ -1302,8 +1162,6 @@ ul.buttons {
   .progress-bar-container progress[value="64"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="64"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p64::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p65::after {
@@ -1320,8 +1178,6 @@ ul.buttons {
   .progress-bar-container progress[value="65"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="65"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p65::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p66::after {
@@ -1338,8 +1194,6 @@ ul.buttons {
   .progress-bar-container progress[value="66"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="66"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p66::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p67::after {
@@ -1356,8 +1210,6 @@ ul.buttons {
   .progress-bar-container progress[value="67"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="67"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p67::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p68::after {
@@ -1374,8 +1226,6 @@ ul.buttons {
   .progress-bar-container progress[value="68"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="68"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p68::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p69::after {
@@ -1392,8 +1242,6 @@ ul.buttons {
   .progress-bar-container progress[value="69"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="69"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p69::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p70::after {
@@ -1410,8 +1258,6 @@ ul.buttons {
   .progress-bar-container progress[value="70"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="70"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p70::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p71::after {
@@ -1428,8 +1274,6 @@ ul.buttons {
   .progress-bar-container progress[value="71"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="71"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p71::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p72::after {
@@ -1446,8 +1290,6 @@ ul.buttons {
   .progress-bar-container progress[value="72"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="72"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p72::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p73::after {
@@ -1464,8 +1306,6 @@ ul.buttons {
   .progress-bar-container progress[value="73"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="73"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p73::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p74::after {
@@ -1482,8 +1322,6 @@ ul.buttons {
   .progress-bar-container progress[value="74"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="74"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p74::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p75::after {
@@ -1500,8 +1338,6 @@ ul.buttons {
   .progress-bar-container progress[value="75"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="75"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p75::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p76::after {
@@ -1518,8 +1354,6 @@ ul.buttons {
   .progress-bar-container progress[value="76"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="76"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p76::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p77::after {
@@ -1536,8 +1370,6 @@ ul.buttons {
   .progress-bar-container progress[value="77"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="77"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p77::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p78::after {
@@ -1554,8 +1386,6 @@ ul.buttons {
   .progress-bar-container progress[value="78"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="78"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p78::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p79::after {
@@ -1572,8 +1402,6 @@ ul.buttons {
   .progress-bar-container progress[value="79"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="79"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p79::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p80::after {
@@ -1590,8 +1418,6 @@ ul.buttons {
   .progress-bar-container progress[value="80"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="80"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p80::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p81::after {
@@ -1608,8 +1434,6 @@ ul.buttons {
   .progress-bar-container progress[value="81"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="81"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p81::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p82::after {
@@ -1626,8 +1450,6 @@ ul.buttons {
   .progress-bar-container progress[value="82"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="82"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p82::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p83::after {
@@ -1644,8 +1466,6 @@ ul.buttons {
   .progress-bar-container progress[value="83"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="83"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p83::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p84::after {
@@ -1662,8 +1482,6 @@ ul.buttons {
   .progress-bar-container progress[value="84"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="84"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p84::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p85::after {
@@ -1680,8 +1498,6 @@ ul.buttons {
   .progress-bar-container progress[value="85"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="85"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p85::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p86::after {
@@ -1698,8 +1514,6 @@ ul.buttons {
   .progress-bar-container progress[value="86"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="86"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p86::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p87::after {
@@ -1716,8 +1530,6 @@ ul.buttons {
   .progress-bar-container progress[value="87"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="87"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p87::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p88::after {
@@ -1734,8 +1546,6 @@ ul.buttons {
   .progress-bar-container progress[value="88"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="88"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p88::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p89::after {
@@ -1752,8 +1562,6 @@ ul.buttons {
   .progress-bar-container progress[value="89"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="89"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p89::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p90::after {
@@ -1770,8 +1578,6 @@ ul.buttons {
   .progress-bar-container progress[value="90"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="90"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p90::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p91::after {
@@ -1788,8 +1594,6 @@ ul.buttons {
   .progress-bar-container progress[value="91"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="91"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p91::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p92::after {
@@ -1806,8 +1610,6 @@ ul.buttons {
   .progress-bar-container progress[value="92"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="92"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p92::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p93::after {
@@ -1824,8 +1626,6 @@ ul.buttons {
   .progress-bar-container progress[value="93"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="93"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p93::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p94::after {
@@ -1842,8 +1642,6 @@ ul.buttons {
   .progress-bar-container progress[value="94"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="94"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p94::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p95::after {
@@ -1860,8 +1658,6 @@ ul.buttons {
   .progress-bar-container progress[value="95"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="95"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p95::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p96::after {
@@ -1878,8 +1674,6 @@ ul.buttons {
   .progress-bar-container progress[value="96"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="96"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p96::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p97::after {
@@ -1896,8 +1690,6 @@ ul.buttons {
   .progress-bar-container progress[value="97"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="97"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p97::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p98::after {
@@ -1914,8 +1706,6 @@ ul.buttons {
   .progress-bar-container progress[value="98"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="98"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p98::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p99::after {
@@ -1932,8 +1722,6 @@ ul.buttons {
   .progress-bar-container progress[value="99"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="99"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p99::-webkit-progress-value {
     background: #48A058; }
   .progress-bar-container .progress-bar.p100::after {
@@ -1950,8 +1738,6 @@ ul.buttons {
   .progress-bar-container progress[value="100"]::-moz-progress-bar {
     height: 4px;
     background: #48A058; }
-    .progress-bar-container progress[value="100"]::-moz-progress-bar.primary {
-      background: #48A058; }
   .progress-bar-container progress.p100::-webkit-progress-value {
     background: #48A058; }
 

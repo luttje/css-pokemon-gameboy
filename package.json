@@ -4,7 +4,7 @@
   "author": {
     "name": "Lutt.online"
   },
-  "version": "0.4.0",
+  "version": "0.4.1",
   "license": "Unlicense",
   "repository": "https://github.com/luttje/css-pokemon-gameboy",
   "engines": {
@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "grunt": "^1.4.1",
+    "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^3.1.0",
