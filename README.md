@@ -7,15 +7,15 @@ This is a joke CSS-framework and it is not intended for use in production. You c
 
 ## Using the distribution
 
-1. Copy all the files in the `dist` directory to your project
+1. Copy all the files in the `dist/styles` directory to `styles` in your project
 
-2. Append the following includes in the body of the page the utilize this style:
+2. Append the following include on the page where you want this style:
 
 ```html
 <link rel="stylesheet" href="./styles/pokemon-gameboy-css.css">
 ```
 
-3. See the demo.html or .scss-files for all possible classes and effects.
+3. See the [demo](https://luttje.github.io/css-pokemon-gameboy/), index.html or .scss-files for all possible classes and effects.
 
 
 ## Compile it yourself
