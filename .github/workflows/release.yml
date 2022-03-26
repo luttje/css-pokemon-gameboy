@@ -21,8 +21,10 @@ jobs:
           directory: 'dist/styles/'
 
       - name: Create Release on GitHub
-        uses: softprops/action-gh-release@v0.1.14
+        uses: ncipollo/release-action@v1
         with:
+          artifacts: 'release.zip'
+          removeArtifacts: true
+          body: 'Automatic release created by GitHub Action.'
           prerelease: true
-          body: Automatic release created by GitHub Action.
-          files: 'release.zip'
+          token: ${{ secrets.GITHUB_TOKEN }}
