@@ -33,6 +33,12 @@ module.exports = function(grunt) {
         src: ['**'],
         dest: 'dist/styles/images/'
       },
+      meta: {
+        expand: true,
+        cwd: 'src/',
+        src: ['*.png', '*.ico', 'site.webmanifest'],
+        dest: 'dist/'
+      },
       demo: {
         src: 'src/demo.html',
         dest: 'dist/index.html'

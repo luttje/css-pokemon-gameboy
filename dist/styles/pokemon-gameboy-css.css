@@ -1149,7 +1149,6 @@ body {
   min-width: 320px;
   background: #F8F3F8;
   color: #181010;
-  font-size: 11px;
   image-rendering: pixelated; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1194,11 +1193,11 @@ h1, h2, h3, h4, h5, h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 400px;
+  max-width: 512px;
   background: #F8F3F8;
   padding: 2em; }
   .github .stats {
-    margin-right: 8em; }
+    margin-right: 4em; }
 
 @keyframes floater {
   0% {
