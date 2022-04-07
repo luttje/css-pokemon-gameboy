@@ -81,6 +81,7 @@ a.button, a.button:hover, a.button:active {
 button, .button {
   position: relative;
   font-family: "Pokemon GB";
+  font-size: 1em;
   background: none;
   border: none;
   padding: 0 0 0 1em;
