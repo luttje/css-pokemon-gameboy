@@ -91,7 +91,14 @@ pre[class*=language-] {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  transition: opacity 0.3s; }
+  #githubHint.closed {
+    opacity: 0;
+    pointer-events: none; }
+    #githubHint.closed .github {
+      transition: transform 0.2s;
+      transform: translate(0, 150%); }
 
 .github {
   position: fixed;
@@ -103,18 +110,24 @@ pre[class*=language-] {
   .github .stats {
     margin-right: 4em; }
 
+.contains-code {
+  padding-bottom: 2em; }
+
 .code .toggle {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0; }
   .code .toggle::after {
-    content: 'Toggle code'; }
+    content: 'Toggle code view'; }
 
 .code.show pre {
-  display: block; }
+  opacity: 1;
+  z-index: 1; }
 
 .code pre {
-  display: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.1s;
   position: absolute;
   overflow: auto;
   top: 2em;
@@ -124,7 +137,8 @@ pre[class*=language-] {
   background: #F8F3F8; }
 
 .code pre, .code code {
-  white-space: pre-wrap; }
+  white-space: pre-wrap;
+  margin-bottom: 2em; }
 
 @keyframes floater {
   0% {

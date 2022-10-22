@@ -11,6 +11,17 @@
     right: 0;
     bottom: 0;
     left: 0;
+    transition: opacity 0.3s;
+
+    &.closed{
+        opacity: 0;
+        pointer-events: none;
+
+        .github{
+            transition: transform 0.2s;
+            transform: translate(0, 150%);
+        }
+    }
 }
 .github{
     position: fixed;
@@ -25,23 +36,30 @@
     }
 }
 
+.contains-code {
+    padding-bottom: 2em;   
+}
+
 .code{
     .toggle{
         position: absolute;
-        top: 0;
+        bottom: 0;
         right: 0;
 
         &::after{
-            content: 'Toggle code';
+            content: 'Toggle code view';
         }
     }
 
     &.show pre{
-        display: block;
+        opacity: 1;
+        z-index: 1;
     }
 
     pre{
-        display: none;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.1s;
         position: absolute;
         overflow: auto;
         top: $medium-padding;
@@ -53,6 +71,7 @@
 
     pre, code{
         white-space: pre-wrap;
+        margin-bottom: 2em;
     }
 }
 
