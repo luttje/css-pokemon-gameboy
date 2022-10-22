@@ -20,7 +20,7 @@
             <span>This is a demo of a joke CSS-framework.</span>
         </header>
         <main>
-            <section class="framed">
+            <section class="framed contains-code">
                 <h2>Frames</h2>
                 <p>Frames can be used to clearly indicate sections or menu's.</p>
     
@@ -46,11 +46,13 @@
 </div>
                 </div>
             </section>
-            <section class="framed">
+            <section class="framed contains-code">
                 <h2>Buttons</h2>
                 <p>Buttons are recognizable by their text being uppercase. Hover over buttons to see a selection indicator</p>
                 
-                <button>This is an example button</button>
+                <div class="viewable-code">
+<button>This is an example button</button>
+                </div>
 
                 <p>You can organize buttons like you would see them in Pokémon, either in a list (start-menu) or in a group of 4.</p>
 
@@ -78,7 +80,7 @@
 </div>
                 </div>
             </section>
-            <section class="framed">
+            <section class="framed contains-code">
                 <h2>Progress / Health Bar</h2>
                 <p>Like in the game, this progress/health bar changes colour when it's low (by default).</p>
                 
@@ -127,7 +129,7 @@
                         <a href="https://github.com/luttje/css-pokemon-gameboy/" target="_new" class="button">Go to GitHub Repo</a>
                     </p>
                     <p>
-                        <a href="javascript:var gh = document.getElementById('githubHint'); gh.remove(gh);" class="button">Close this message</a>
+                        <a href="javascript:var gh = document.getElementById('githubHint'); gh.classList.add('closed');" class="button">Close this message</a>
                     </p>
                 </div>
             </div>
@@ -143,24 +145,29 @@
 
         let codeElements = document.querySelectorAll('.viewable-code');
         codeElements.forEach(codeElement => {
-            let codeViewParent = document.createElement('div');
-            codeViewParent.classList.add('code');
-            codeElement.parentElement.appendChild(codeViewParent);
+            let codeViewParent;
+            
+            if((codeViewParent = codeElement.parentElement.querySelector('.code')) === null){
+                codeViewParent = document.createElement('div');
+                codeViewParent.classList.add('code');
+                codeElement.parentElement.appendChild(codeViewParent);
 
-            let pre = document.createElement('pre');
-            codeViewParent.appendChild(pre);
+                let pre = document.createElement('pre');
+                codeViewParent.appendChild(pre);
+                
+                let code = document.createElement('code');
+                code.classList.add('language-html');
+                pre.appendChild(code);
 
-            let code = document.createElement('code');
-            code.classList.add('language-html');
-            code.textContent = codeElement.innerHTML;
-            pre.appendChild(code);
+                let button = document.createElement('button');
+                button.classList.add('toggle');
+                button.addEventListener('click', ev => {
+                    toggleCode(ev.target)
+                });
+                codeViewParent.appendChild(button);
+            }
 
-            let button = document.createElement('button');
-            button.classList.add('toggle');
-            button.addEventListener('click', ev => {
-                toggleCode(ev.target)
-            });
-            codeViewParent.appendChild(button);
+            codeViewParent.querySelector('code').textContent += codeElement.innerHTML;
         });
     </script>
     <script src="scripts/third-party/prism.js"></script>
