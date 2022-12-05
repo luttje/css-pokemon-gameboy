@@ -22,8 +22,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1em;
   margin: 1em 0 0 0;
   width: 100%;
-  max-width: 100%;
-  min-width: 320px; }
+  max-width: 100%; }
   .framed.no-hd {
     border-image: url("./images/frame.png") 7 round;
     border-width: 7px; }
@@ -86,6 +85,7 @@ button, .button {
   border: none;
   padding: 0 0 0 1em;
   text-transform: uppercase;
+  text-align: left;
   cursor: pointer; }
   button:hover::before, .button:hover::before {
     content: "";
