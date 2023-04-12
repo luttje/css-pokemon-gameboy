@@ -36,4 +36,4 @@ This is a joke CSS-framework and it is not intended for use in production. You c
 **The images in this repository are the property of Nintendo. The style is also property of Nintendo.**
 
 The code in this repository is Unlicensed, with the exception of used third-party libraries like
-PrismJs, Grunt, Node and npm. You can view the licenses related to third-parties in [LICENSE-3RD-PARTY.txt](LICENSE-3RD-PARTY.txt) or on their respective websites.
+PrismJs, Grunt, Node and npm. You can view the licenses related to third-parties in [LICENSES-THIRD-PARTY.txt](LICENSES-THIRD-PARTY.txt) or on their respective websites.
