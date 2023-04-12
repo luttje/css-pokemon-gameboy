@@ -75,5 +75,4 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', ['clean', 'copy', 'sass']);
-
 };
