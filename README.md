@@ -31,9 +31,8 @@ This is a joke CSS-framework and it is not intended for use in production. You c
 3. Run `npm run watch` in the root directory to watch for changes in the `src` directory and automatically build new distributions.
 
 
-## Licenses
+## Third-party Licenses
 
 **The images in this repository are the property of Nintendo. The style is also property of Nintendo.**
 
-The code in this repository is Unlicensed, with the exception of used third-party libraries like
-PrismJs, Grunt, Node and npm. You can view the licenses related to third-parties in [LICENSES-THIRD-PARTY.txt](LICENSES-THIRD-PARTY.txt) or on their respective websites.
+You can view the licenses related to third-party code in [LICENSES-THIRD-PARTY.md](LICENSES-THIRD-PARTY.md) or on their respective websites.
