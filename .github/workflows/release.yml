@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      RELEASE_FILE_NAME: 'css-pokemon-gameboy-${{ github.ref_name }}.zip'
+      RELEASE_FILE_NAME: 'css-pokemon-gameboy-${{ github.ref_name }}'
 
     steps:
       - name: Checkout
@@ -28,21 +28,32 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build the css to dist-release
+      - name: Build the minified css to dist-release
         run: npm run build:css
 
       - name: Zip Release
         uses: TheDoctor0/zip-release@0.7.6
         with:
           type: 'zip'
-          filename: ${{ env.RELEASE_FILE_NAME }}
+          filename: ../${{ env.RELEASE_FILE_NAME }}.min.zip
+          path: 'template.html styles'
+          directory: 'dist-release'
+
+      - name: Build the full css to dist-release
+        run: npm run build:css:full
+
+      - name: Zip Release
+        uses: TheDoctor0/zip-release@0.7.6
+        with:
+          type: 'zip'
+          filename: ../${{ env.RELEASE_FILE_NAME }}.zip
           path: 'template.html styles'
           directory: 'dist-release'
 
       - name: Create Release on GitHub
         uses: ncipollo/release-action@v1
         with:
-          artifacts: 'dist-release/${{ env.RELEASE_FILE_NAME }}'
+          artifacts: '${{ env.RELEASE_FILE_NAME }}.min.zip,${{ env.RELEASE_FILE_NAME }}.zip'
           removeArtifacts: true
           body: 'Automatic release created by GitHub Action.'
           prerelease: true

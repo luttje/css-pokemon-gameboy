@@ -38,6 +38,8 @@ This is a joke CSS-framework and it is not intended for use in production. You c
 
 4. To build the css files run `npm run build:css` to build the css file with all needed static files to the `dist-release` directory
 
+5. For the non-minified css file run `npm run build:css:full`
+
 ## Third-party Licenses
 
 **The images in this repository are the property of Nintendo. The style is also property of Nintendo.**

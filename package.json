@@ -14,6 +14,7 @@
     "build": "tsc && vite build --config vite.demo.config.js",
     "preview": "vite preview --config vite.demo.config.js",
     "build:css": "tsc && vite build --config vite.lib.config.js",
+    "build:css:full": "tsc && vite build --config vite.lib.full.config.js",
     "licenses": "npx license-checker-rseidelsohn --plainVertical --excludePackages css-pokemon-gameboy --out LICENSES-THIRD-PARTY.md"
   },
   "files": [
