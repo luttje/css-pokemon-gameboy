@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      RELEASE_FILE_NAME: 'css-pokemon-gameboy-${{ github.ref }}.zip'
+      RELEASE_FILE_NAME: 'css-pokemon-gameboy-${{ github.ref_name }}.zip'
 
     steps:
       - name: Checkout
