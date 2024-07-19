@@ -5,26 +5,44 @@ on:
     tags:
       - "v*.*.*"
 
+permissions:
+  contents: write
+
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+
+    env:
+      RELEASE_FILE_NAME: 'css-pokemon-gameboy-${{ github.ref }}.zip'
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the css to dist-release
+        run: npm run build:css
 
       - name: Zip Release
-        uses: TheDoctor0/zip-release@0.6.1
+        uses: TheDoctor0/zip-release@0.7.6
         with:
           type: 'zip'
-          filename: 'release.zip'
+          filename: ${{ env.RELEASE_FILE_NAME }}
           path: 'template.html styles'
-          directory: 'dist'
+          directory: 'dist-release'
 
       - name: Create Release on GitHub
         uses: ncipollo/release-action@v1
         with:
-          artifacts: 'dist/release.zip'
+          artifacts: 'dist-release/${{ env.RELEASE_FILE_NAME }}'
           removeArtifacts: true
           body: 'Automatic release created by GitHub Action.'
           prerelease: true
-          token: ${{ secrets.GITHUB_TOKEN }}

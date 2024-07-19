@@ -1,24 +1,33 @@
 {
   "name": "css-pokemon-gameboy",
   "description": "A small CSS-framework based on the original Pokémon games for the Game Boy.",
+  "private": true,
+  "version": "0.6.0",
+  "type": "module",
   "author": {
     "name": "Lutt.online"
   },
-  "version": "0.5.0",
   "license": "Unlicense",
   "repository": "https://github.com/luttje/css-pokemon-gameboy",
   "scripts": {
-    "watch": "grunt watch",
-    "build": "grunt && npm run licenses",
+    "dev": "vite --config vite.demo.config.js",
+    "build": "tsc && vite build --config vite.demo.config.js",
+    "preview": "vite preview --config vite.demo.config.js",
+    "build:css": "tsc && vite build --config vite.lib.config.js",
     "licenses": "npx license-checker-rseidelsohn --plainVertical --excludePackages css-pokemon-gameboy --out LICENSES-THIRD-PARTY.md"
   },
+  "files": [
+    "dist-lib/css-pokemon-gameboy.css"
+  ],
   "devDependencies": {
-    "grunt": "^1.6.1",
-    "grunt-contrib-clean": "^2.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-sass": "^3.1.0",
+    "@types/prismjs": "^1.26.4",
     "license-checker-rseidelsohn": "^4.2.0",
-    "node-sass": "^7.0.3"
+    "sass": "^1.77.8",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4"
+  },
+  "dependencies": {
+    "prismjs": "^1.29.0",
+    "redent": "^4.0.0"
   }
 }

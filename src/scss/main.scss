@@ -6,70 +6,39 @@
 @import 'input.scss';
 @import 'progress-bars.scss';
 
-body{
-    font-family: $font-content;
-    font-smooth: never;
-    -webkit-font-smoothing : none;
+body {
+  font-family: $font-content;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
 
-    min-width: $min-width;
+  min-width: $min-width;
+  padding: $big-padding;
 
-    background: $neutral;
-    color: $contrast;
+  background: $neutral;
+  color: $contrast;
 
-    image-rendering: pixelated;
+  image-rendering: pixelated;
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-weight: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
 }
 
-.wrapper{
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+h1 {
+  margin-bottom: $padding;
 }
 
-.options{
-    display: flex;
-    justify-content: space-around;
+.wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.opponent{
-    text-align: center;
-    padding: $padding;
-
-    img{
-        width: 64px;
-    }
-    
-    animation-name: floater;
-    animation-duration: 6000ms;
-    transform-origin: 50% 50%;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-}
-
-.message span{
-    font-weight: bolder;
-}
-
-@media only screen and (max-width: 760px) {
-    .framed {
-        padding: $padding * $small-modifier;
-        margin: $padding * $small-modifier 0 0 0;
-    }
-    
-    .stats{
-        padding: $padding * $small-modifier;
-
-        h2{
-            margin-left: -$padding * $small-modifier;
-            margin-top: -$padding * $small-modifier;
-            padding: $padding * $small-modifier $padding * $small-modifier $padding * $small-modifier 0;
-        }
-    }
-    
-    .opponent{
-        padding: $padding * $small-modifier;
-    }
+.message span {
+  font-weight: bolder;
 }

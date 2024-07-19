@@ -1,83 +1,97 @@
-.progress-bar-container{
-    display: flex;
-    align-items: center;
+.progress-bar-container {
+  display: flex;
+  align-items: center;
 
-    label{
-        margin-right: $padding;
-    }
+  label {
+    margin-right: $padding;
+  }
 
-    .progress-bar, progress{
-        position: relative;
-        flex-grow: 1;
+  .progress-bar,
+  progress {
+    position: relative;
+    flex-grow: 1;
+    height: 4px;
+
+    border: 2px solid transparent;
+    border-image-slice: 1;
+    border-image-width: 2px;
+    border-block: 0;
+    border-image-outset: 2px 0 2px 0;
+    border-image-repeat: stretch stretch;
+    border-image-source: url('../images/progress-frame.png');
+    background: none;
+    background-clip: padding-box;
+  }
+
+  progress::-webkit-progress-bar {
+    background: none;
+  }
+
+  progress::-webkit-progress-value,
+  progress.primary::-webkit-progress-value,
+  progress.primary::-moz-progress-bar {
+    background: $primary-accent;
+  }
+
+  @for $i from 1 through 100 {
+    .progress-bar.p#{$i} {
+      &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+
+        @if $i < 21 {
+          background: $danger-accent;
+        }
+
+        @else if $i < 51 {
+          background: $secondary-accent;
+        }
+
+        @else {
+          background: $primary-accent;
+        }
+
+        width: #{$i + '%'};
         height: 4px;
+        top: 0;
+        left: 0;
+      }
 
-        border: 2px solid transparent;
-        border-image-slice: 1;
-        border-image-width: 2px;
-        border-block: 0;
-        border-image-outset: 2px 0 2px 0;
-        border-image-repeat: stretch stretch;
-        border-image-source: url('./images/progress-frame.png');
-        background: none;
-        background-clip: padding-box;
-    }
-
-    progress::-webkit-progress-bar {
-        background: none;
-    }
-
-    progress::-webkit-progress-value, 
-    progress.primary::-webkit-progress-value,
-    progress.primary::-moz-progress-bar{
+      &.primary::after {
         background: $primary-accent;
+      }
     }
-            
-    @for $i from 1 through 100 {
-        .progress-bar.p#{$i}{
-            &::after { 
-                content: '';
-                display: inline-block;
-                position: absolute;
 
-                @if $i < 21 {
-                    background: $danger-accent;
-                } @else if $i < 51 {
-                    background: $secondary-accent;
-                } @else{
-                    background: $primary-accent;
-                }
-                width: #{$i + '%'};
-                height: 4px;
-                top: 0;
-                left: 0;
-            }
+    progress[value="#{$i}"]::-moz-progress-bar {
+      height: 4px;
 
-            &.primary::after {
-                background: $primary-accent;
-            }
-        }
-    
-        progress[value="#{$i}"]::-moz-progress-bar{
-            height: 4px;
+      @if $i < 21 {
+        background: $danger-accent;
+      }
 
-            @if $i < 21 {
-                background: $danger-accent;
-            } @else if $i < 51 {
-                background: $secondary-accent;
-            } @else{
-                background: $primary-accent;
-            }
-        }
+      @else if $i < 51 {
+        background: $secondary-accent;
+      }
 
-        // TODO: Find way to dynamically change color based on value. On Chrome progress[value="#{$i}"]::-webkit-progress-value does not get applied.
-        progress.p#{$i}::-webkit-progress-value{
-            @if $i < 21 {
-                background: $danger-accent;
-            } @else if $i < 51 {
-                background: $secondary-accent;
-            } @else{
-                background: $primary-accent;
-            }
-        }
+      @else {
+        background: $primary-accent;
+      }
     }
+
+    // TODO: Find way to dynamically change color based on value. On Chrome progress[value="#{$i}"]::-webkit-progress-value does not get applied.
+    progress.p#{$i}::-webkit-progress-value {
+      @if $i < 21 {
+        background: $danger-accent;
+      }
+
+      @else if $i < 51 {
+        background: $secondary-accent;
+      }
+
+      @else {
+        background: $primary-accent;
+      }
+    }
+  }
 }

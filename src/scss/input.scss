@@ -1,57 +1,60 @@
 $pixel-scale: 2px;
 
-a.button, a.button:hover, a.button:active{
-    color: $contrast;
-    text-decoration: none;
+a.button,
+a.button:hover,
+a.button:active {
+  color: $contrast;
+  text-decoration: none;
 }
 
-button, .button{
-    position: relative;
-    font-family: $font-content;
-    font-size: 1em;
-    background: none;
-    border: none;
-    padding: 0 0 0 $padding;
-    text-transform: uppercase;
-    text-align: left;
-    cursor: pointer;
-    
-    &:hover::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -2px;
+button,
+.button {
+  position: relative;
+  font-family: $font-content;
+  font-size: 1em;
+  background: none;
+  border: none;
+  padding: 0 0 0 $padding;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
 
-        @include arrow-right;
-    }
+  &:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
 
-    &.pokemon{
-        text-indent: -1000em;
-        width: 100%;
-        background: url('./images/pkmn.png') 1em center no-repeat;
-        background-size: contain;
-    }
+    @include arrow-right;
+  }
+
+  &.pokemon {
+    text-indent: -1000em;
+    width: 100%;
+    background: url('../images/pkmn.png') 1em center no-repeat;
+    background-size: contain;
+  }
 }
 
-ul.buttons{
-    display: inline-flex;
+ul.buttons {
+  display: inline-flex;
+  padding: 0;
+  list-style: none;
+  flex-direction: column;
+
+  li {
     padding: 0;
-    list-style: none;
-    flex-direction: column;
+    margin: 0.5em;
+  }
 
-    li{
-        padding: 0;
-        margin: 0.5em;
+  &.compact {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & li {
+      flex-basis: 45%;
     }
-
-    &.compact{
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        & li {
-            flex-basis: 45%;
-        }
-    }
+  }
 
 
 }

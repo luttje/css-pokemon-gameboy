@@ -1,0 +1,159 @@
+/*
+    Styling, specifically for the demo on GitHub
+*/
+@import '_variables.scss';
+
+.options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.opponent {
+  text-align: center;
+  padding: $padding;
+
+  animation-name: floater;
+  animation-duration: 6000ms;
+  transform-origin: 50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+
+  img {
+    width: 64px;
+  }
+}
+
+.progress-bar-container {
+  margin-bottom: $padding;
+}
+
+@media only screen and (max-width: 760px) {
+  .framed {
+    padding: $padding * $small-modifier;
+    margin: $padding * $small-modifier 0 0 0;
+  }
+
+  .stats {
+    padding: $padding * $small-modifier;
+
+    h2 {
+      margin-left: -$padding * $small-modifier;
+      margin-top: -$padding * $small-modifier;
+      padding: $padding * $small-modifier $padding * $small-modifier $padding * $small-modifier 0;
+    }
+  }
+
+  .opponent {
+    padding: $padding * $small-modifier;
+  }
+}
+
+section.framed {
+  margin: $medium-padding 0;
+  padding-bottom: $big-padding;
+}
+
+#githubHint {
+  background-color: $dimmed;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  transition: opacity 0.3s;
+
+  .github {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 512px;
+    padding: 2em;
+
+    .stats {
+      margin-right: $big-padding;
+    }
+  }
+
+  &.closed {
+    opacity: 0;
+    pointer-events: none;
+
+    .github {
+      transition: transform 0.2s;
+      transform: translate(-50%, 100%);
+    }
+  }
+}
+
+.code {
+  margin-bottom: $padding;
+
+  .toggle {
+    position: absolute;
+    bottom: $medium-padding;
+    right: $padding;
+    z-index: 1;
+    background: $neutral;
+
+    &::after {
+      content: 'Toggle code view';
+    }
+  }
+
+  &.show pre {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  pre {
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.1s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $neutral;
+  }
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    margin: 0;
+  }
+}
+
+@keyframes floater {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(2px, 20px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .options {
+    flex-direction: column;
+
+    &>div {
+      margin: $padding;
+    }
+  }
+
+  .github {
+    max-width: 100%;
+    top: initial;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+}
