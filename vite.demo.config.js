@@ -2,7 +2,7 @@ import { server } from 'typescript'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/',
+  base: '/css-pokemon-gameboy/',
   build: {
     outDir: 'dist',
   }
