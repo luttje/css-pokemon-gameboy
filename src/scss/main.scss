@@ -13,11 +13,16 @@ body {
 
   min-width: $min-width;
   padding: $big-padding;
+  margin: 0;
 
   background: $neutral;
   color: $contrast;
 
   image-rendering: pixelated;
+
+  @media screen and (max-width: $medium) {
+    padding: $medium-padding;
+  }
 }
 
 h1,

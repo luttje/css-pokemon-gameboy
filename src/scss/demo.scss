@@ -6,6 +6,14 @@
 .options {
   display: flex;
   justify-content: space-around;
+
+  @media only screen and (max-width: $medium) {
+    flex-direction: column;
+
+    &>div {
+      margin: $padding * $small-modifier;
+    }
+  }
 }
 
 .opponent {
@@ -21,31 +29,14 @@
   img {
     width: 64px;
   }
+
+  @media only screen and (max-width: $medium) {
+    padding: $padding * $small-modifier;
+  }
 }
 
 .progress-bar-container {
   margin-bottom: $padding;
-}
-
-@media only screen and (max-width: 760px) {
-  .framed {
-    padding: $padding * $small-modifier;
-    margin: $padding * $small-modifier 0 0 0;
-  }
-
-  .stats {
-    padding: $padding * $small-modifier;
-
-    h2 {
-      margin-left: -$padding * $small-modifier;
-      margin-top: -$padding * $small-modifier;
-      padding: $padding * $small-modifier $padding * $small-modifier $padding * $small-modifier 0;
-    }
-  }
-
-  .opponent {
-    padding: $padding * $small-modifier;
-  }
 }
 
 section.framed {
@@ -53,8 +44,17 @@ section.framed {
   padding-bottom: $big-padding;
 }
 
+.framed {
+  @media only screen and (max-width: $medium) {
+    padding: $padding * $small-modifier;
+    margin: $padding * $small-modifier 0 0 0;
+  }
+}
+
 #githubHint {
   background-color: $dimmed;
+  display: grid;
+  place-content: center;
   position: fixed;
   top: 0;
   right: 0;
@@ -64,15 +64,34 @@ section.framed {
   transition: opacity 0.3s;
 
   .github {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     max-width: 512px;
-    padding: 2em;
+    padding: $medium-padding;
 
     .stats {
       margin-right: $big-padding;
+
+      @media only screen and (max-width: $medium) {
+        padding: $padding * $small-modifier;
+
+        h2 {
+          margin-left: -$padding * $small-modifier;
+          margin-top: -$padding * $small-modifier;
+          padding: $padding * $small-modifier $padding * $small-modifier $padding * $small-modifier 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: $medium) {
+      max-width: 100%;
+      padding: $padding;
+      max-width: 100%;
+      top: initial;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: $padding;
+      transform: translate(0, 0);
+      width: initial;
     }
   }
 
@@ -135,25 +154,6 @@ section.framed {
   }
 
   100% {
-    transform: translate(0, 0);
-  }
-}
-
-@media only screen and (max-width: 760px) {
-  .options {
-    flex-direction: column;
-
-    &>div {
-      margin: $padding;
-    }
-  }
-
-  .github {
-    max-width: 100%;
-    top: initial;
-    right: 0;
-    bottom: 0;
-    left: 0;
     transform: translate(0, 0);
   }
 }

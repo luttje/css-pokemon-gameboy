@@ -2,8 +2,18 @@
   display: flex;
   align-items: center;
 
+  @media screen and (max-width: $medium) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   label {
     margin-right: $padding;
+
+    @media screen and (max-width: $medium) {
+      margin-bottom: $padding * $small-modifier;
+      margin-right: 0;
+    }
   }
 
   .progress-bar,
