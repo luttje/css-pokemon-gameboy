@@ -25,7 +25,7 @@
     "license-checker-rseidelsohn": "^4.2.0",
     "sass": "^1.77.8",
     "typescript": "^5.2.2",
-    "vite": "^6.4.2"
+    "vite": "^8.0.16"
   },
   "dependencies": {
     "prismjs": "^1.30.0",
